@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:showDividers="middle|beginning|end">
+
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:showDividers="middle|beginning|end">
+      <TextView
+        android:layout_width="0.0dip"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="源地址"/>
+      <TextView
+        android:layout_width="0.0dip"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="目的地址"/>
+      <TextView
+        android:layout_width="0.0dip"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="测试参数"/>
+    </TableRow>
+
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="153dp"
+      android:orientation="horizontal"
+      android:showDividers="middle|beginning|end">
+      <TextView
+        android:id="@+id/localIp"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:text="127.0.0.1"/>
+
+      <TableLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end">
+        <ListView
+          android:id="@+id/listView"
+          android:layout_width="wrap_content"
+          android:fadeScrollbars="true"
+          android:layout_height="200dp"/>
+
+      </TableLayout>
+
+      <TableLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:showDividers="middle|beginning|end">
+        <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:showDividers="middle|beginning|end">
+          <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="发包数"/>
+
+          <EditText
+            android:id="@+id/packetCount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13dp"
+            />
+        </TableRow>
+
+        <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:showDividers="middle|beginning|end">
+          <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="发包间隔(s)"/>
+
+          <EditText
+            android:id="@+id/interval"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13dp"
+            />
+        </TableRow>
+
+        <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:showDividers="middle|beginning|end">
+          <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="测试次数"/>
+
+          <EditText
+            android:id="@+id/testTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13dp"
+            />
+        </TableRow>
+
+        <TableRow
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:showDividers="middle|beginning|end">
+          <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="等待时间(s)"/>
+
+          <EditText
+            android:id="@+id/waitTime"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="13dp"
+            />
+        </TableRow>
+      </TableLayout>
+
+
+    </TableRow>
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="229dp"
+      android:orientation="horizontal"
+      android:showDividers="middle|beginning|end">
+      <TextView
+        android:layout_width="0.0dip"
+        android:layout_weight="1.5"/>
+
+      <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0.0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+        <Button
+          android:id="@+id/add"
+          android:layout_width="50dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+          android:background="#FFFFFF"
+          android:text="增加"
+          android:textColor="#000000"/>
+
+        <Button
+          android:id="@+id/delete"
+          android:layout_width="50dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="40dp"
+          android:background="#FFFFFF"
+          android:text="删除"
+          android:textColor="#000000"/>
+
+      </LinearLayout>
+      <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0.0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <Button
+          android:id="@+id/save"
+          android:layout_width="50dp"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="50dp"
+          android:background="#FFFFFF"
+          android:text="保存"
+          android:textColor="#000000"/>
+      </LinearLayout>
+
+    </TableRow>
+    <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:layout_gravity="center"
+      android:orientation="horizontal"
+      android:showDividers="middle|beginning|end">
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="17dp"
+        android:text="添加目标地址会刷新页面，请先添加再设置测试参数"/>
+    </TableRow>
+
+  </TableLayout>
+
+</LinearLayout>

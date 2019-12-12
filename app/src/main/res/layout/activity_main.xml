@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFEEFF"
+        android:text="测试配置"
+        android:textColor="#000000"/>
+      <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFEEFF"
+        android:text="启动测试"
+        android:textColor="#000000"/>
+      <Button
+        android:id="@+id/stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFEEFF"
+        android:text="停止测试"
+        android:textColor="#000000"/>
+      <Button
+        android:id="@+id/saveTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:background="#FFEEFF"
+        android:text="导出TXT"
+        android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/pingMsg"
+      android:layout_width="match_parent"
+      android:layout_height="144dp"
+      android:scrollbars="vertical"
+      android:text="PING信息"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <TextView
+        android:id="@+id/testResult"
+        android:layout_width="45pt"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:text="测试结果"/>
+
+      <Button
+        android:id="@+id/saveExcel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEEFF"
+        android:text="导出Excel"
+        android:textColor="#000000"/>
+    </LinearLayout>
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="140dp"
+      android:scrollbars="none"
+      android:layout_weight="1">
+    <TableLayout
+      android:id="@+id/resultTable"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:showDividers="middle|beginning|end">
+
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="middle|beginning|end">
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1.6"
+          android:gravity="left"
+          android:text="测试时间"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1.5"
+          android:gravity="left"
+          android:text="响应端"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="left"
+          android:text="MIN"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="left"
+          android:text="MAX"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="left"
+          android:text="AVG"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:gravity="left"
+          android:text="丢包率"/>
+
+        <TextView
+          android:layout_width="0dp"
+          android:layout_weight="1.6"
+          android:gravity="left"
+          android:text="测试次数"/>
+
+      </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <TextView
+        android:id="@+id/textView3"
+        android:layout_width="45pt"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:text="邮件信息"/>
+
+      <Button
+        android:id="@+id/sendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEEFF"
+        android:text="发送邮件"
+        android:textColor="#000000"/>
+    </LinearLayout>
+
+    <TableLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:showDividers="middle|beginning|end">
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusableInTouchMode="true"
+        android:showDividers="middle|beginning|end">
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:gravity="left"
+          android:text="接收地址"/>
+
+        <EditText
+          android:id="@+id/addressee"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:textSize="15dp"
+          android:hint="请输入接收地址"
+          />
+
+        <Button
+          android:id="@+id/chooseFile"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFEEFF"
+          android:text="选择文件"
+          android:textColor="#000000"/>
+
+        <TextView
+          android:id="@+id/filePath"
+          android:layout_width="100dp"
+          android:layout_height="wrap_content"
+          android:textSize="15dp"
+          android:hint="请选择文件"
+          />
+      </TableRow>
+
+      <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusableInTouchMode="true"
+        android:showDividers="middle|beginning|end">
+        <TextView
+          android:layout_width="wrap_content"
+          android:gravity="left"
+          android:text="发送地址"/>
+
+        <EditText
+          android:id="@+id/sender"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:textSize="15dp"
+          android:hint="请输入发送人账号"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:gravity="center"
+          android:text="邮箱密码"/>
+
+        <EditText
+          android:id="@+id/password"
+          android:layout_width="150dp"
+          android:layout_height="wrap_content"
+          android:inputType="textPassword"
+          android:textSize="15dp"
+          android:hint="请输入密码"
+          />
+      </TableRow>
+    </TableLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+      <Button
+        android:id="@+id/capabilityTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="#FFEEFF"
+        android:text="性能测试"
+        android:textColor="#000000"/>
+      <Button
+        android:id="@+id/velocityTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFEEFF"
+        android:text="速度测试"
+        android:textColor="#000000"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
