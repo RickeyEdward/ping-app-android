@@ -6,3 +6,4 @@
 环境SDK29,JDK1.8
 运行环境Android8.0
 依赖管理工具 gradle 5.4.1
+开发工具Android Studio
